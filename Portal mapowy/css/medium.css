@@ -1,0 +1,21 @@
+.searchBox {
+    flex-direction: row;
+    height: auto;
+    width: 60%;
+}
+
+.inputBox {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 60%;
+    padding: 0 10px;
+}
+
+#searchInput {
+    width: 50%;
+    margin-top: 0;
+}
+
+.buttonBox {
+    width: 40%;
+}

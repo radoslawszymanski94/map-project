@@ -1,0 +1,197 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --main-btn-color: rgb(96, 199, 104);
+    --main-font-color: #000;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--main-font-color);
+}
+
+.container,
+#map {
+    height: 100vh;
+}
+
+#map {
+    z-index: 0;
+}
+
+button {
+    padding: 10px 12px;
+    border-radius: 2rem;
+    letter-spacing: 1px;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform .5s;
+}
+
+#clearInputBtn:hover,
+#searchBtn:hover {
+    transform: scale(1.05);
+}
+
+#clearInputBtn {
+    background-color: tomato;
+}
+
+#clearInputBtn:disabled,
+.addMarkerBtn:disabled,
+.removeMarkerBtn:disabled {
+    background-color: rgb(172, 172, 172);
+    cursor: not-allowed;
+}
+
+#searchBtn {
+    background-color: var(--main-btn-color);
+}
+
+.addMarkerBtn,
+.removeMarkerBtn,
+.showSearchBoxBtn {
+    position: absolute;
+    background-color: var(--main-btn-color);
+    z-index: 1;
+}
+
+.addMarkerBtn {
+    top: 2rem;
+}
+
+.removeMarkerBtn {
+    top: 7.5rem;
+}
+
+.addMarkerBtn,
+.removeMarkerBtn {
+    font-size: 2.4rem;
+    right: 2rem;
+    border-radius: 50%;
+}
+
+.addMarkerInfo,
+.removeMarkerInfo,
+.showSearchBoxBtn {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.addMarkerInfo,
+.removeMarkerInfo {
+    position: absolute;
+    opacity: 0;
+    top: 70px;
+    background-color: var(--main-btn-color);
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    z-index: 1;
+    transition: opacity .5s;
+}
+
+.addMarkerBtn:hover~.addMarkerInfo,
+.removeMarkerBtn:hover~.removeMarkerInfo {
+    opacity: 1;
+}
+
+.showSearchBoxBtn {
+    top: 20px;
+    z-index: 1;
+    transition: opacity .5s linear;
+}
+
+.searchBox {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 200px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 20px 0;
+    background-color: rgb(248, 248, 248);
+    box-shadow: 5px 5px 10px #333;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity .5s linear;
+}
+
+.closeWindowBtn,
+.inputBox,
+.buttonBox,
+.searchBox {
+    display: flex;
+    align-items: center;
+}
+
+.buttonBox {
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+}
+
+#searchInput {
+    height: 30px;
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: 1px solid rgb(185, 185, 185);
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.closeWindowBtn {
+    position: absolute;
+    align-self: center;
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+    width: 18px;
+    height: 18px;
+    padding: 2px;
+    color: #000;
+}
+
+.info {
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+    color: tomato;
+}

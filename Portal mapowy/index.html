@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal mapowy</title>
+    <script src="https://kit.fontawesome.com/8cff20b140.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" media="screen and (min-width:576px)" href="/css/small.css">
+    <link rel="stylesheet" media="screen and (min-width:768px)" href="/css/medium.css">
+    <link rel="stylesheet" media="screen and (min-width:992px)" href="/css/large.css">
+</head>
+
+<body>
+    <div class="container">
+        <button class="showSearchBoxBtn">wyszukaj</button>
+        <button class="addMarkerBtn" disabled><i class="fas fa-plus-circle"></i></button>
+        <p class="addMarkerInfo">Kliknij aby dodać marker do wyszukanego miasta</p>
+        <button class="removeMarkerBtn" disabled><i class="fas fa-minus-circle"></i></button>
+        <p class="removeMarkerInfo">Kliknij aby usunąć dodany marker</p>
+        <div id="map">
+        </div>
+        <div class="searchBox">
+            <button class="closeWindowBtn"><i class="fas fa-times-circle"></i></button>
+            <div class="inputBox">
+                <label for="searchInput">Wprowadź nazwę miasta:</label>
+                <input type="text" id="searchInput" placeholder="Nazwa miasta">
+            </div>
+            <div class="buttonBox">
+                <button id="clearInputBtn" disabled>wyczyść</button>
+                <button id="searchBtn">szukaj</button>
+            </div>
+            <p class="info"></p>
+        </div>
+    </div>
+
+
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
